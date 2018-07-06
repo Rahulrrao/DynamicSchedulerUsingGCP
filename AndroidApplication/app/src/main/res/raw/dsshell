@@ -1,0 +1,51 @@
+#const timeslots_per_day=24.
+timeslot(1..timeslots_per_day).
+#const timeslotlimit = 7 * timeslots_per_day.
+
+assigned(Day,Type,S,Length) :- daily_assigned(Type,S,Length), day(Day), S<=timeslots_per_day-Length.
+
+
+
+possible_start(Day,Type,S,Length) :- daily_task_length(Type,Length), daily_task_in_chunk(Type,Length),S<=timeslots_per_day - Length+ 1,timeslot(S),day(Day), not daily_assigned(Type,_,_).
+
+possible_start(Day,Type,S,Length) :- weekly_task_length(Type,Length), weekly_task_in_chunk(Type,Length),S<=timeslots_per_day - Length+ 1,timeslot(S),day(Day), not daily_assigned(Type,_,_).
+
+
+possible_start(Day,Type,S,Length) :- weekly_task_length(Type,Length1),not weekly_task_in_chunk(Type,Length1),Length>0,Length<=Length1,timeslot(S),timeslot(Length),S<=timeslots_per_day - Length+ 1,Additive = Day * timeslots_per_day,day(Day).
+
+possible_start(Day,Type,S,Length) :- daily_task_length(Type,Length1), not daily_task_in_chunk(Type,_), Length>0,Length<=Length1,timeslot(S),timeslot(Length),S<=timeslots_per_day - Length + 1,day(Day),not daily_assigned(Type,_,_).
+
+
+
+{assigned(Day,Type,Start,Length)} :- possible_start(Day,Type,Start,Length).
+
+:- assigned(Day,Type,Start,Length),assigned(Day,Type1,Start1,Length1),Endslot=Start+Length,Start1>=Start,Start1<Endslot,Type1 != Type,day(Day).
+
+:- assigned(Day,Type,Start,Length),assigned(Day,Type1,Start1,Length1),Endslot=Start+Length,Start1>Start,Start1<Endslot,Type1 = Type,day(Day).
+
+:- assigned(Day,Type,Start,Length),assigned(Day,Type1,Start1,Length1), Type=Type1, Start=Start1,Length != Length1,day(Day).
+
+:- assigned(Day,Type,Start,Length),task_allowed_timings(Type,Low,High),Start<Low,day(Day).
+:- assigned(Day,Type,Start,Length),task_allowed_timings(Type,Low,High),Start>High,day(Day).
+
+
+
+task_assigned_length(Type,S) :- S = #sum{ Length1,Day,Start : assigned(Day,Type,Start,Length1)}, types(Type),day(Day).
+
+
+
+weekly_task_length_sum(Type,S) :- S = #sum{ Length1,Day1,Start : assigned(Day1,Type,Start,Length1)},types(Type),weekly_task_length(Type,Length2).
+
+
+:- task_assigned_length(Type,Length), daily_task_length(Type,Length1), Length != Length1.
+
+
+weekly_task_length_remaining(Type,R) :- R = Length - Sum, weekly_task_length(Type,Length),weekly_task_length_sum(Type,Sum),types(Type).
+:- weekly_task_length_remaining(Type,R),R<0.
+
+
+:~ weekly_task_length_remaining(Type,Length),types(Type),weekly_task_priority(Type,Priority). [Length@Priority]
+
+
+
+#show assigned/4.

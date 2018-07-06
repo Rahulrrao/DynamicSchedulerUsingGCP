@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".result_page">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:stretchColumns="0,1"
+        android:id="@+id/main_table"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:layout_width="fill_parent">
+        <TableRow>
+            <TextView
+                android:text="@string/TIME"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#0000ff"
+                android:padding="3dip" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="20sp"
+                android:text="@string/EVENT"
+                android:textColor="#0000ff" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t1"
+                android:text="00-1"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e1"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t2"
+                android:text="1-2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t3"
+                android:text="2-3"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e3"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t4"
+                android:text="3-4"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e4"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t5"
+                android:text="4-5"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e5"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t6"
+                android:text="5-6"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e6"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t7"
+                android:text="6-7"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e7"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t8"
+                android:text="7-8"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e8"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t9"
+                android:text="8-9"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e9"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t10"
+                android:text="9-10"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e10"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t11"
+                android:text="10-11"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e11"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t12"
+                android:text="11-12"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e12"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t13"
+                android:text="12-13"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e13"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t14"
+                android:textSize="18sp"
+                android:text="13-14"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e14"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t15"
+                android:text="14-15"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e15"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t16"
+                android:text="15-16"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e16"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t17"
+                android:text="16-17"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e17"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t18"
+                android:text="17-18"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e18"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t19"
+                android:text="18-19"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e19"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t20"
+                android:text="19-20"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e20"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t21"
+                android:text="20-21"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e21"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t22"
+                android:text="21-22"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e22"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t23"
+                android:text="22-23"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e23"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t24"
+                android:text="23-00"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:padding="3dip" />
+            <TextView
+                android:id="@+id/e24"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:padding="3dip" />
+        </TableRow>
+    </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

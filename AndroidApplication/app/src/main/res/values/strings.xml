@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Cloud Comptuing Project</string>
+    <string name="enter_text">Enter your asp program here</string>
+    <string name="send">Send</string>
+    <string name="options">Choose an option</string>
+    <string name="asp">Run your own ASP program</string>
+    <string name="ds">Dynamic Scheduler</string>
+    <string name="asp_label">ASP Program</string>
+    <string name="title_activity_ds">DSActivity</string>
+    <string name="task_name">Enter task name</string>
+    <string name="task_desc">Enter task description</string>
+    <string name="submit">Submit</string>
+    <string name="days">Enter the days(1-7)</string>
+    <string name="chunk">Enter timespan</string>
+    <string name="TIME">Time</string>
+    <string name="EVENT">Event</string>
+    <string name="task_type">Enter task type</string>
+    <string name="time">Enter time in 24hrs</string>
+    <string-array name="routine">
+        <item>Daily</item>
+        <item>Weekly</item>
+    </string-array>
+    <string-array name="routine2">
+        <item>Assigned</item>
+        <item>Goal</item>
+    </string-array>
+</resources>
